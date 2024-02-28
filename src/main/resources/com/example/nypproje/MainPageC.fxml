@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="ap" prefHeight="800.0" prefWidth="800.0" styleClass="anchor" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nypproje.MainPageC">
+    <children>
+        <Pane prefHeight="800.0" prefWidth="220.0">
+            <children>
+                <Button layoutX="56.0" layoutY="184.0" mnemonicParsing="false" onAction="#Account" prefHeight="25.0" prefWidth="101.0" text="Accout" />
+                <Button layoutX="56.0" layoutY="219.0" mnemonicParsing="false" onAction="#Product" prefHeight="25.0" prefWidth="101.0" text="Take order" />
+                <Button layoutX="56.0" layoutY="257.0" mnemonicParsing="false" onAction="#Orders" prefHeight="25.0" prefWidth="101.0" text="Previous order" />
+                <Button layoutX="56.0" layoutY="293.0" mnemonicParsing="false" onAction="#LogOut" prefHeight="25.0" prefWidth="101.0" text="Log out" />
+            </children>
+        </Pane>
+      <GridPane fx:id="account" layoutX="230.0" layoutY="10.0" opacity="0.0" prefHeight="731.0" prefWidth="570.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="157.33331298828125" minWidth="10.0" prefWidth="157.33331298828125" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.9999796549479" minWidth="10.0" prefWidth="218.9999796549479" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="238.3333740234375" minWidth="10.0" prefWidth="193.00002034505212" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="642.6666259765625" minHeight="10.0" prefHeight="642.6666259765625" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="350.66670735677076" minHeight="10.0" prefHeight="72.66670735677076" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox prefHeight="561.0" prefWidth="100.0" spacing="25.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="100.0" text="ID:" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="25.0" prefWidth="100.0" text="Name:" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="100.0" text="Address:" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="100.0" text="City:" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="100.0" text="Postal code:" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="100.0" text="Country:" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="100.0" text="Phone:" />
+                  <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="351.0" prefHeight="25.0" prefWidth="100.0" text="Old password:" />
+                  <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="466.0" prefHeight="25.0" prefWidth="100.0" text="New Password:" />
+               </children>
+            </VBox>
+            <ImageView fx:id="photo" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+            <Button mnemonicParsing="false" onAction="#change" text="Change Password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <VBox prefHeight="561.0" prefWidth="200.0" spacing="20.5" GridPane.columnIndex="1">
+               <children>
+                  <TextField fx:id="acc_id" editable="false" prefHeight="30.0" prefWidth="150.0" />
+                  <TextField fx:id="acc_name" editable="false" prefHeight="30.0" prefWidth="150.0" />
+                  <TextField fx:id="acc_adres" editable="false" prefHeight="30.0" prefWidth="150.0" />
+                  <TextField fx:id="acc_city" editable="false" prefHeight="30.0" prefWidth="150.0" />
+                  <TextField fx:id="acc_postalcode" editable="false" prefHeight="30.0" prefWidth="150.0" />
+                  <TextField fx:id="acc_country" editable="false" prefHeight="30.0" prefWidth="150.0" />
+                  <TextField fx:id="acc_phone" editable="false" prefHeight="30.0" prefWidth="150.0" />
+                  <TextField fx:id="acc_oldpass" layoutX="10.0" layoutY="415.0" prefHeight="30.0" prefWidth="150.0" styleClass="log" />
+                  <TextField fx:id="acc_newpass" layoutX="10.0" layoutY="466.0" prefHeight="30.0" prefWidth="150.0" styleClass="log" />
+                  <Label fx:id="acc_error" prefHeight="38.0" prefWidth="219.0" textAlignment="JUSTIFY" wrapText="true" />
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets top="30.0" />
+         </padding>
+      </GridPane>
+      <GridPane fx:id="products" layoutX="220.0" opacity="0.0" prefHeight="800.0" prefWidth="581.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="505.0" minWidth="10.0" prefWidth="493.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="360.3333435058594" minWidth="10.0" prefWidth="87.66666666666663" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="666.0000305175781" minHeight="10.0" prefHeight="87.66665776570638" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="721.3333231608073" minHeight="10.0" prefHeight="503.33333333333326" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="721.3333231608073" minHeight="10.0" prefHeight="168.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <GridPane GridPane.rowIndex="2">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TextField fx:id="totalprice" editable="false" GridPane.columnIndex="2">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </TextField>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="1">
+                     <children>
+                        <Button fx:id="down" mnemonicParsing="false" onAction="#Down" prefHeight="42.0" prefWidth="42.0">
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@left-arrow.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label fx:id="quantity" prefHeight="41.0" prefWidth="28.0" />
+                        <Button fx:id="up" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#Up" prefHeight="42.0" prefWidth="42.0">
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@right-arrow.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <ComboBox fx:id="productID" prefWidth="150.0" promptText="Select product ID" />
+                  <Button mnemonicParsing="false" onAction="#TakeOrder" text="Take Order" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <TableView fx:id="tablep" prefHeight="454.0" prefWidth="493.0" GridPane.rowIndex="1">
+               <columns>
+                  <TableColumn fx:id="col1p" prefWidth="83.33329772949219" text="ID" />
+                  <TableColumn fx:id="col2p" prefWidth="133.33331298828125" text="Name" />
+                  <TableColumn fx:id="col3p" prefWidth="144.00003051757812" text="Price" />
+                  <TableColumn fx:id="col4p" prefWidth="132.66668701171875" text="Quantity" />
+               </columns>
+            </TableView>
+            <Label prefHeight="43.0" prefWidth="258.0" text="List of all products: " />
+         </children>
+         <padding>
+            <Insets bottom="50.0" />
+         </padding>
+      </GridPane>
+      <GridPane fx:id="resorders" layoutX="220.0" prefHeight="800.0" prefWidth="581.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="505.0" minWidth="10.0" prefWidth="493.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="360.3333435058594" minWidth="10.0" prefWidth="87.66666666666663" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="666.0000305175781" minHeight="10.0" prefHeight="87.66665776570638" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="721.3333231608073" minHeight="10.0" prefHeight="503.33333333333326" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="721.3333231608073" minHeight="10.0" prefHeight="168.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TableView fx:id="table" prefHeight="454.0" prefWidth="493.0" GridPane.rowIndex="1">
+               <columns>
+                  <TableColumn fx:id="col1" prefWidth="119.33329772949219" text="Name of Product" />
+                  <TableColumn fx:id="col2" prefWidth="103.33331298828125" text="Price" />
+                  <TableColumn fx:id="col3" prefWidth="148.00003051757812" text="Ship Via" />
+                  <TableColumn fx:id="col4" prefWidth="124.66668701171875" text="Cargo price" />
+               </columns>
+            </TableView>
+            <Label prefHeight="43.0" prefWidth="258.0" text="Your previous orders: " />
+         </children>
+         <padding>
+            <Insets bottom="50.0" />
+         </padding>
+      </GridPane>
+    </children>
+</AnchorPane>

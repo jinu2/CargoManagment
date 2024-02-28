@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="mssql-jdbc-11.2.2.jre11">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/sqljdbc_11.2.2.0_enu/sqljdbc_11.2/enu/mssql-jdbc-11.2.2.jre11.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <NATIVE>
+      <root url="file://$USER_HOME$/Downloads/sqljdbc_11.2.2.0_enu" />
+      <root url="file://$USER_HOME$/Downloads/sqljdbc_11.2.2.0_enu/sqljdbc_11.2/enu/auth/x64" />
+    </NATIVE>
+    <SOURCES />
+  </library>
+</component>
